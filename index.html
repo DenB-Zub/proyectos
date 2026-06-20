@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Ti ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#ffe6eb,#fff0f5);
+    color:#333;
+}
+
+/* MENÚ */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 25px;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:bold;
+    color:#d63384;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+}
+
+.nav-links li{
+    margin-left:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#d63384;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ff1493;
+}
+
+.menu-btn{
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+}
+
+.menu-btn span{
+    width:28px;
+    height:3px;
+    background:#d63384;
+    margin:3px;
+    border-radius:10px;
+}
+
+/* SECCIONES */
+
+section{
+    min-height:100vh;
+    padding:120px 30px 50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.card{
+    background:white;
+    max-width:900px;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+h1{
+    color:#d63384;
+    margin-bottom:20px;
+    font-size:3rem;
+}
+
+h2{
+    color:#ff1493;
+    margin-top:25px;
+}
+
+p{
+    font-size:1.15rem;
+    line-height:1.8;
+}
+
+/* PORTADA */
+
+.hero{
+    background:
+    linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)),
+    url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1400&q=80");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero .card{
+    background:rgba(255,255,255,.9);
+}
+
+/* BOTÓN VOLVER ARRIBA */
+
+.top-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#d63384;
+    color:white;
+    text-decoration:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    transition:.3s;
+}
+
+.top-btn:hover{
+    transform:scale(1.1);
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#d63384;
+    color:white;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .menu-btn{
+        display:flex;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        display:none;
+        box-shadow:0 5px 15px rgba(0,0,0,.1);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links li{
+        margin:15px 0;
+        text-align:center;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+
+    p{
+        font-size:1rem;
+    }
+
+    .card{
+        padding:25px;
+    }
+}
+.corazon{
+    position:fixed;
+    color:red;
+    font-size:20px;
+    animation:flotar 5s linear infinite;
+}
+
+@keyframes flotar{
+
+    0%{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header id="top">
+    <nav>
+
+        <div class="logo">❤️ Para Ti ❤️</div>
+
+        <ul class="nav-links" id="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#error">Lo Que Pasó</a></li>
+            <li><a href="#sentimientos">Lo Que Siento</a></li>
+            <li><a href="#perdon">Perdón</a></li>
+            <li><a href="#promesa">Promesa</a></li>
+        </ul>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </nav>
+</header>
+
+<!-- INICIO -->
+
+<section class="hero" id="inicio">
+    
+    <div class="card">
+        <h1>❤️ Para la Persona Más Especial ❤️</h1>
+
+        <p>
+            Esta página fue creada con mucho cariño para ti.
+            No pretende borrar mis errores, pero sí expresar lo que siento.
+        </p>
+
+        <br>
+
+        <p>
+            Sé que olvidé fechas importantes y entiendo perfectamente
+            por qué eso pudo hacerte sentir triste.
+            Por eso quise dedicarte estas palabras desde el corazón.
+        </p>
+    </div>
+    <h2>Tiempo juntos</h2>
+    <div id="contador"></div>
+</section>
+
+<!-- ERROR -->
+
+<section id="error">
+    <div class="card">
+        <h1>😔 Lo Que Pasó</h1>
+
+        <p>
+            Cometí un error al olvidar fechas que eran importantes para nosotros.
+            Sé que esos momentos representan recuerdos, emociones y detalles
+            que merecen ser valorados.
+        </p>
+
+        <br>
+
+        <p>
+            Entiendo que pudo parecer que no les daba importancia,
+            pero la realidad es que nunca dejaron de significar algo para mí.
+            Admito que fallé, y por ello te pido disculpas.
+        </p>
+    </div>
+</section>
+
+<!-- SENTIMIENTOS -->
+
+<section id="sentimientos">
+    <div class="card">
+        <h1>💖 Lo Que Siento</h1>
+
+        <p>
+            Quiero que sepas que cada día agradezco tenerte en mi vida.
+            Tus sonrisas, tus ocurrencias, tu apoyo y tu compañía
+            son cosas que valoro muchísimo.
+        </p>
+
+        <br>
+
+        <p>
+            Puede que haya olvidado una fecha,
+            pero jamás olvido lo importante que eres para mí.
+            Eres alguien que ocupa un lugar muy especial en mi corazón.
+        </p>
+    </div>
+</section>
+
+<!-- PERDÓN -->
+
+<section id="perdon">
+    <div class="card">
+        <h1>🙏 Perdóname</h1>
+
+        <p>
+            No busco excusas.
+            Sé que me equivoqué y asumo completamente mi responsabilidad.
+        </p>
+
+        <br>
+
+        <p>
+            Solo quiero pedirte una oportunidad para demostrarte
+            que puedo hacerlo mejor,
+            que puedo prestar más atención a los detalles
+            y que puedo cuidar mucho más aquello que compartimos.
+        </p>
+
+        <br>
+
+        <p>
+            Lo siento de verdad.
+        </p>
+    </div>
+</section>
+
+<!-- PROMESA -->
+
+<section id="promesa">
+    <div class="card">
+        <h1>🌹 Mi Promesa</h1>
+
+        <p>
+            Prometo esforzarme más.
+            Prometo recordar los momentos importantes.
+            Prometo valorar aún más cada instante que compartimos.
+        </p>
+
+        <br>
+
+        <p>
+            Porque las fechas son importantes,
+            pero tú lo eres muchísimo más.
+        </p>
+
+        <h2>❤️ Gracias por estar en mi vida ❤️</h2>
+
+        <br>
+
+        <p>
+            Con cariño,<br>
+            Tu chico arrepentido ❤️
+        </p>
+    </div>
+</section>
+
+<footer>
+    Hecho con amor ❤️
+</footer>
+
+<a href="#top" class="top-btn">↑</a>
+
+<script>
+
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+    link.addEventListener("click",()=>{
+        document.getElementById("menu").classList.remove("active");
+    });
+});
+
+    const fechaInicio = new Date("2025-07-01");
+    function actualizarContador(){
+
+    const ahora = new Date();
+
+    const diferencia = ahora - fechaInicio;
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+    document.getElementById("contador").innerHTML =
+    `❤️ ${dias} días juntos ❤️`;
+}
+
+actualizarContador();
+
+setInterval(()=>{
+
+    const corazon = document.createElement("div");
+
+    corazon.classList.add("corazon");
+
+    corazon.innerHTML = "❤️";
+
+    corazon.style.left = Math.random()*100+"vw";
+
+    document.body.appendChild(corazon);
+
+    setTimeout(()=>{
+        corazon.remove();
+    },5000);
+
+},500);
+
+</script>
+
+</body>
+</html>
